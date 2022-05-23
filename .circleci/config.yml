@@ -12,8 +12,8 @@ jobs:
     docker:
       - image: cimg/base:stable 
     steps:
-      - checkout
       - node/install
+      - checkout
       - browser-tools/install-chrome
       - aws-cli/setup:
           profile-name: cli
