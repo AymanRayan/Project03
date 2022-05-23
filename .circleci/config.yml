@@ -12,8 +12,8 @@ jobs:
     docker:
       - image: cimg/base:stable 
     steps:
-      - node/install
       - checkout
+      - node/install
       - browser-tools/install-chrome
       - aws-cli/setup:
           profile-name: cli
@@ -44,6 +44,6 @@ jobs:
           command: npm run frontend:deploy
 
 workflows:
-  deploy:
+  build_deploy:
     jobs:
       - deploy
