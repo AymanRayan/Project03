@@ -19,7 +19,6 @@ jobs:
       - browser-tools/install-chrome
       - aws-cli/setup:
           profile-name: cli
-      - eb/setup
       - run:
           name: Backend-API install
           command: npm run backend:install
