@@ -12,9 +12,10 @@ orbs:
 jobs:
   deploy:
     docker:
-      - image: cimg/node:16.10 
+      - image: cimg/base:stable
     steps:
-      - node/install
+      - node/install:
+          node-version: '16.13'
       - checkout
       - browser-tools/install-chrome
       - aws-cli/setup:
@@ -25,6 +26,7 @@ jobs:
       - run:
           name: Frontend install
           command: npm run frontend:install
+      - eb/setup    
       - run:
           name: Backend-API testing
           command: npm run backend:test
