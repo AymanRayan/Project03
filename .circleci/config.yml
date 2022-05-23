@@ -17,7 +17,6 @@ jobs:
       - node/install:
           node-version: '16.13'
       - checkout
-      - browser-tools/install-chrome
       - aws-cli/setup:
           profile-name: cli
       - run:
