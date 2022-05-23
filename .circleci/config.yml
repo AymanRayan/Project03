@@ -43,3 +43,11 @@ jobs:
           name: Frontend deploy
           command: npm run frontend:deploy
 
+workflows:
+  deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
