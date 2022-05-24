@@ -18,3 +18,14 @@
 - Deploy backend (in Elastic Beanstalk environment)
 - Deploy frontend (in S3 bucket)
 
+
+## Description
+The pipeline involves one job and one workflow - I know this needs to be made
+more granular in larger projects.
+of CircleCI. It uses a docker image with Node.js v16, because the default stable
+image seems to be shipping with v17 which caused trouble with some library that
+required OpenSSL settings.
+
+
+## Diagram
+![Diagram pipeline](diagrams/pipeline.drawio.png)
