@@ -44,7 +44,8 @@ jobs:
 workflows:
   build_deploy:
     jobs:
-      - deployfilters:
+      - deploy:
+          filters:
             branches:
               only:
-                - master
+                - main
